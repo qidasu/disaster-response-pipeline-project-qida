@@ -1,0 +1,316 @@
+,0,1
+0,related,"              precision    recall  f1-score   support
+
+           0       0.56      0.43      0.48      1245
+           1       0.83      0.89      0.86      3950
+           2       0.67      0.16      0.26        49
+
+    accuracy                           0.78      5244
+   macro avg       0.68      0.50      0.53      5244
+weighted avg       0.76      0.78      0.76      5244
+"
+1,request,"              precision    recall  f1-score   support
+
+           0       0.89      0.97      0.93      4376
+           1       0.72      0.40      0.51       868
+
+    accuracy                           0.87      5244
+   macro avg       0.80      0.68      0.72      5244
+weighted avg       0.86      0.87      0.86      5244
+"
+2,offer,"              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00      5220
+           1       0.00      0.00      0.00        24
+
+    accuracy                           1.00      5244
+   macro avg       0.50      0.50      0.50      5244
+weighted avg       0.99      1.00      0.99      5244
+"
+3,aid_related,"              precision    recall  f1-score   support
+
+           0       0.66      0.90      0.76      3083
+           1       0.70      0.34      0.46      2161
+
+    accuracy                           0.67      5244
+   macro avg       0.68      0.62      0.61      5244
+weighted avg       0.68      0.67      0.64      5244
+"
+4,medical_help,"              precision    recall  f1-score   support
+
+           0       0.92      0.99      0.95      4808
+           1       0.38      0.07      0.11       436
+
+    accuracy                           0.91      5244
+   macro avg       0.65      0.53      0.53      5244
+weighted avg       0.88      0.91      0.88      5244
+"
+5,medical_products,"              precision    recall  f1-score   support
+
+           0       0.95      0.99      0.97      4970
+           1       0.24      0.05      0.09       274
+
+    accuracy                           0.94      5244
+   macro avg       0.60      0.52      0.53      5244
+weighted avg       0.91      0.94      0.92      5244
+"
+6,search_and_rescue,"              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.99      5091
+           1       0.56      0.03      0.06       153
+
+    accuracy                           0.97      5244
+   macro avg       0.76      0.52      0.52      5244
+weighted avg       0.96      0.97      0.96      5244
+"
+7,security,"              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99      5150
+           1       0.00      0.00      0.00        94
+
+    accuracy                           0.98      5244
+   macro avg       0.49      0.50      0.50      5244
+weighted avg       0.96      0.98      0.97      5244
+"
+8,military,"              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98      5054
+           1       0.60      0.05      0.09       190
+
+    accuracy                           0.96      5244
+   macro avg       0.78      0.52      0.53      5244
+weighted avg       0.95      0.96      0.95      5244
+"
+9,child_alone,"              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00      5244
+
+    accuracy                           1.00      5244
+   macro avg       1.00      1.00      1.00      5244
+weighted avg       1.00      1.00      1.00      5244
+"
+10,water,"              precision    recall  f1-score   support
+
+           0       0.95      0.99      0.97      4937
+           1       0.53      0.20      0.29       307
+
+    accuracy                           0.94      5244
+   macro avg       0.74      0.59      0.63      5244
+weighted avg       0.93      0.94      0.93      5244
+"
+11,food,"              precision    recall  f1-score   support
+
+           0       0.92      0.98      0.95      4670
+           1       0.59      0.27      0.37       574
+
+    accuracy                           0.90      5244
+   macro avg       0.75      0.62      0.66      5244
+weighted avg       0.88      0.90      0.88      5244
+"
+12,shelter,"              precision    recall  f1-score   support
+
+           0       0.93      0.98      0.95      4802
+           1       0.41      0.14      0.21       442
+
+    accuracy                           0.91      5244
+   macro avg       0.67      0.56      0.58      5244
+weighted avg       0.88      0.91      0.89      5244
+"
+13,clothing,"              precision    recall  f1-score   support
+
+           0       0.99      1.00      0.99      5169
+           1       0.64      0.09      0.16        75
+
+    accuracy                           0.99      5244
+   macro avg       0.81      0.55      0.58      5244
+weighted avg       0.98      0.99      0.98      5244
+"
+14,money,"              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99      5145
+           1       0.60      0.03      0.06        99
+
+    accuracy                           0.98      5244
+   macro avg       0.79      0.51      0.52      5244
+weighted avg       0.97      0.98      0.97      5244
+"
+15,missing_people,"              precision    recall  f1-score   support
+
+           0       0.99      1.00      0.99      5175
+           1       0.50      0.01      0.03        69
+
+    accuracy                           0.99      5244
+   macro avg       0.74      0.51      0.51      5244
+weighted avg       0.98      0.99      0.98      5244
+"
+16,refugees,"              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98      5065
+           1       0.08      0.01      0.01       179
+
+    accuracy                           0.96      5244
+   macro avg       0.52      0.50      0.50      5244
+weighted avg       0.94      0.96      0.95      5244
+"
+17,death,"              precision    recall  f1-score   support
+
+           0       0.96      0.99      0.97      4998
+           1       0.42      0.11      0.17       246
+
+    accuracy                           0.95      5244
+   macro avg       0.69      0.55      0.57      5244
+weighted avg       0.93      0.95      0.94      5244
+"
+18,other_aid,"              precision    recall  f1-score   support
+
+           0       0.87      0.99      0.93      4556
+           1       0.39      0.03      0.06       688
+
+    accuracy                           0.87      5244
+   macro avg       0.63      0.51      0.50      5244
+weighted avg       0.81      0.87      0.81      5244
+"
+19,infrastructure_related,"              precision    recall  f1-score   support
+
+           0       0.94      1.00      0.97      4905
+           1       0.20      0.01      0.02       339
+
+    accuracy                           0.93      5244
+   macro avg       0.57      0.50      0.49      5244
+weighted avg       0.89      0.93      0.90      5244
+"
+20,transport,"              precision    recall  f1-score   support
+
+           0       0.95      1.00      0.98      4995
+           1       0.59      0.05      0.10       249
+
+    accuracy                           0.95      5244
+   macro avg       0.77      0.53      0.54      5244
+weighted avg       0.94      0.95      0.93      5244
+"
+21,buildings,"              precision    recall  f1-score   support
+
+           0       0.95      1.00      0.97      4970
+           1       0.34      0.04      0.07       274
+
+    accuracy                           0.95      5244
+   macro avg       0.65      0.52      0.52      5244
+weighted avg       0.92      0.95      0.92      5244
+"
+22,electricity,"              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99      5146
+           1       0.60      0.03      0.06        98
+
+    accuracy                           0.98      5244
+   macro avg       0.79      0.52      0.52      5244
+weighted avg       0.97      0.98      0.97      5244
+"
+23,tools,"              precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00      5209
+           1       0.00      0.00      0.00        35
+
+    accuracy                           0.99      5244
+   macro avg       0.50      0.50      0.50      5244
+weighted avg       0.99      0.99      0.99      5244
+"
+24,hospitals,"              precision    recall  f1-score   support
+
+           0       0.99      1.00      0.99      5191
+           1       0.00      0.00      0.00        53
+
+    accuracy                           0.99      5244
+   macro avg       0.49      0.50      0.50      5244
+weighted avg       0.98      0.99      0.98      5244
+"
+25,shops,"              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00      5221
+           1       0.00      0.00      0.00        23
+
+    accuracy                           1.00      5244
+   macro avg       0.50      0.50      0.50      5244
+weighted avg       0.99      1.00      0.99      5244
+"
+26,aid_centers,"              precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00      5193
+           1       0.00      0.00      0.00        51
+
+    accuracy                           0.99      5244
+   macro avg       0.50      0.50      0.50      5244
+weighted avg       0.98      0.99      0.99      5244
+"
+27,other_infrastructure,"              precision    recall  f1-score   support
+
+           0       0.95      1.00      0.98      5003
+           1       0.18      0.01      0.02       241
+
+    accuracy                           0.95      5244
+   macro avg       0.57      0.50      0.50      5244
+weighted avg       0.92      0.95      0.93      5244
+"
+28,weather_related,"              precision    recall  f1-score   support
+
+           0       0.79      0.95      0.86      3781
+           1       0.73      0.35      0.47      1463
+
+    accuracy                           0.78      5244
+   macro avg       0.76      0.65      0.67      5244
+weighted avg       0.77      0.78      0.75      5244
+"
+29,floods,"              precision    recall  f1-score   support
+
+           0       0.92      0.99      0.95      4787
+           1       0.54      0.10      0.17       457
+
+    accuracy                           0.91      5244
+   macro avg       0.73      0.55      0.56      5244
+weighted avg       0.89      0.91      0.89      5244
+"
+30,storm,"              precision    recall  f1-score   support
+
+           0       0.93      0.99      0.96      4766
+           1       0.62      0.22      0.32       478
+
+    accuracy                           0.92      5244
+   macro avg       0.77      0.60      0.64      5244
+weighted avg       0.90      0.92      0.90      5244
+"
+31,fire,"              precision    recall  f1-score   support
+
+           0       0.99      1.00      0.99      5183
+           1       0.75      0.05      0.09        61
+
+    accuracy                           0.99      5244
+   macro avg       0.87      0.52      0.54      5244
+weighted avg       0.99      0.99      0.98      5244
+"
+32,earthquake,"              precision    recall  f1-score   support
+
+           0       0.94      0.99      0.96      4772
+           1       0.75      0.33      0.46       472
+
+    accuracy                           0.93      5244
+   macro avg       0.84      0.66      0.71      5244
+weighted avg       0.92      0.93      0.92      5244
+"
+33,cold,"              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99      5152
+           1       0.50      0.03      0.06        92
+
+    accuracy                           0.98      5244
+   macro avg       0.74      0.52      0.53      5244
+weighted avg       0.97      0.98      0.97      5244
+"
+34,other_weather,"              precision    recall  f1-score   support
+
+           0       0.95      1.00      0.97      4970
+           1       0.50      0.03      0.06       274
+
+    accuracy                           0.95      5244
+   macro avg       0.72      0.51      0.51      5244
+weighted avg       0.93      0.95      0.93      5244
+"
