@@ -10,8 +10,8 @@
     - To run ML pipeline that trains classifier and saves
         `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
 
-	## The classification report will be saved as 'classification_report.csv'
-	## A sample of 'classfier.pkl' is compressed as 'models/classifier.7z' 
+	 The classification report will be saved as 'classification_report.csv'
+	 A sample of 'classfier.pkl' is compressed as 'models/classifier.7z' 
 
 2. Run the following command in the app's directory to run your web app.
     `python run.py`
