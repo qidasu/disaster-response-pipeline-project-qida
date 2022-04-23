@@ -2,8 +2,22 @@ import sys
 import pandas as pd
 import sqlite3
 from sqlalchemy import create_engine
+import numpy as np
 
 def load_data(messages_filepath, categories_filepath):
+    '''
+    To load the data
+
+    Parameters
+    ----------
+    messages_filepath : The file path of disaster messgage.
+    categories_filepath : The file path of categories.
+
+    Returns
+    -------
+    df : the dataframe for analysis.
+
+    '''
     messages = pd.read_csv(messages_filepath)
     categories = pd.read_csv(categories_filepath)
     df = categories.merge(messages,how='outer',\
@@ -12,6 +26,18 @@ def load_data(messages_filepath, categories_filepath):
 
 
 def clean_data(df):
+    '''
+    To clean the data    
+
+    Parameters
+    ----------
+    df : the dataframe for analysis.
+
+    Returns
+    -------
+    df : The cleaned dataframe.
+
+    '''
     categories = df['categories'].str.split(';',expand=True)
     row = categories.iloc[0]
     category_colnames= row.apply(lambda x: x.split('-')[0])
@@ -19,6 +45,7 @@ def clean_data(df):
     for column in categories:
         # set each value to be the last character of the string
         categories[column]=(categories[column].apply(lambda x: int(x[-1])))
+    categories.replace(2, np.nan)
     df=df.drop(['categories'], axis=1)
     df = pd.concat([df,categories],axis=1)
     df=df.drop_duplicates()
@@ -26,6 +53,19 @@ def clean_data(df):
 
 
 def save_data(df, database_filename):
+    '''
+    To save the data
+
+    Parameters
+    ----------
+    df : The cleaned dataframe.
+    database_filename : the file name of dataframe.
+
+    Returns
+    -------
+    None.
+
+    '''
     filename="sqlite:///"+database_filename
     engine = create_engine(filename)
     df.to_sql('table_0', engine, index=False,if_exists='replace')

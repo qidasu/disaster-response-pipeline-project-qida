@@ -57,16 +57,19 @@ df = pd.read_sql_table('table_0', engine)
 # load model
 model = joblib.load("../models/classifier.pkl")
 
-
+#print(df.columns)
 # index webpage displays cool visuals and receives user input text for model
 @app.route('/')
 @app.route('/index')
 def index():
     
     # extract data needed for visuals
-    # TODO: Below is an example - modify to extract data for your own visuals
     genre_counts = df.groupby('genre').count()['message']
-    genre_names = list(genre_counts.index)
+    genre_proportion = df.groupby('genre').count()['message']/df.count()['message']
+    genre_names = list(genre_proportion.index)
+    
+    cate_counts=df[df.columns[4:-1]].sum()
+    cate_names = list(df.columns[4:-1])
     
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
@@ -75,6 +78,7 @@ def index():
             'data': [
                 Bar(
                     x=genre_names,
+                    #y=genre_proportion
                     y=genre_counts
                 )
             ],
@@ -88,7 +92,26 @@ def index():
                     'title': "Genre"
                 }
             }
-        }
+        },
+        
+        {
+            'data': [
+                Bar(
+                    x=cate_names,
+                    y=cate_counts
+                )
+            ],
+
+            'layout': {
+                'title': 'Count of Message Category',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Category"
+                }
+            }
+        },
     ]
     
     # encode plotly graphs in JSON
@@ -96,7 +119,7 @@ def index():
     graphJSON = json.dumps(graphs, cls=plotly.utils.PlotlyJSONEncoder)
     
     # render web page with plotly graphs
-    return render_template('master.html', ids=ids, graphJSON=graphJSON)
+    return render_template('master.html', ids=ids, graphJSON=graphJSON,data_set=df)
 
 
 # web page that handles user query and displays model results
@@ -118,8 +141,9 @@ def go():
 
 
 def main():
+    
     app.run(host='0.0.0.0', port=3001, debug=True)
-
+    
 
 if __name__ == '__main__':
     main()

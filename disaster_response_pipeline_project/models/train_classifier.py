@@ -42,16 +42,43 @@ class StartingVerbExtractor(BaseEstimator, TransformerMixin):
         return pd.DataFrame(X_tagged)
 
 def load_data(database_filepath):
+    '''
+    To load the data    
+
+    Parameters
+    ----------
+    database_filepath : the file path of database.
+
+    Returns
+    -------
+    X : message value.
+    Y : category value.
+    category_names : category list.
+
+    '''
     path='sqlite:///'+database_filepath
     engine = create_engine(path)
     df = pd.read_sql_table('table_0',engine)
 
     X = df.message.values
     Y = df[df.columns[4:-1]].values
+
     category_names=df.columns[4:-1].tolist()
     return (X,Y,category_names)
 
 def tokenize(text):
+    '''
+    To tokenize
+
+    Parameters
+    ----------
+    text : the text to be tokenized.
+
+    Returns
+    -------
+    clean_tokens : tokens.
+
+    '''
     #for test in X:
     words=word_tokenize(text)
     lemmatizer=WordNetLemmatizer()
@@ -64,6 +91,14 @@ def tokenize(text):
 
 
 def build_model():
+    '''
+    To Gridsearch the model
+
+    Returns
+    -------
+    cv: return the Gridsearch result.
+
+    '''
     #text processing and model pipeline
     from sklearn.multioutput import MultiOutputClassifier
     from sklearn.neighbors import KNeighborsClassifier
@@ -104,7 +139,21 @@ def build_model():
     return cv#pipeline#
     
 def evaluate_model(model, X_test, Y_test, category_names):
-    
+    '''
+    To evaluate the model
+
+    Parameters
+    ----------
+    model : Model to be evaluated.
+    X_test : messages to be tested.
+    Y_test : categories to be tested.
+    category_names : Name of category.
+
+    Returns
+    -------
+    None.
+
+    '''
     Y_pred = model.predict(X_test)
     
     from sklearn.metrics import classification_report,confusion_matrix
@@ -126,6 +175,19 @@ def evaluate_model(model, X_test, Y_test, category_names):
     '''
 
 def save_model(model, model_filepath):
+    '''
+    To save the model to pickle
+
+    Parameters
+    ----------
+    model : Model to be evaluated.
+    model_filepath : the file path to save.
+
+    Returns
+    -------
+    None.
+
+    '''
     pickle.dump(model, open(model_filepath, 'wb'))
     #pickled_model = pickle.load(open('model.pkl', 'rb'))
 
